@@ -2,12 +2,12 @@ apply plugin: 'com.android.library'
 apply from: 'build_library_ext.gradle'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 23
+        targetSdkVersion 28
     }
     buildTypes {
         release {

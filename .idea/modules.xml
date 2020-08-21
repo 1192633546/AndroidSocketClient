@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidSocketClient.iml" filepath="$PROJECT_DIR$/AndroidSocketClient.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/socketclient/socketclient.iml" filepath="$PROJECT_DIR$/socketclient/socketclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidSocketClient.iml" filepath="$PROJECT_DIR$/AndroidSocketClient.iml" group="AndroidSocketClient" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="AndroidSocketClient/app" />
+      <module fileurl="file://$PROJECT_DIR$/socketclient/socketclient.iml" filepath="$PROJECT_DIR$/socketclient/socketclient.iml" group="AndroidSocketClient/socketclient" />
     </modules>
   </component>
 </project>

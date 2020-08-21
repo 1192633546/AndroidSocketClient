@@ -8,12 +8,10 @@ import android.widget.ImageView;
 import java.nio.ByteBuffer;
 
 public class MainActivity extends AppCompatActivity {
-    final MainActivity self = this;
-
-    private ImageView imageView;
-    protected ImageView getImageView() { if (this.imageView == null) { this.imageView = (ImageView) findViewById(R.id.imageView); } return this.imageView; }
+    public static final String TAG = "MainActivity";
 
     private TestServer testServer;
+
     protected TestServer getTestServer() {
         if (this.testServer == null) {
             this.testServer = new TestServer();
@@ -26,8 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.d("logger", "ts " + bytesToHex(encodeUINT16(18005)));
-        Log.d("logger", "ts " + bytesToHex(encodeUINT16(18005)));
+        Log.d(TAG, "logger" + "ts " + bytesToHex(encodeUINT16(18005)));
 
         getTestServer().beginListen();
     }
@@ -42,9 +39,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     final protected static char[] hexArray = "0123456789ABCDEF".toCharArray();
+
     public static String bytesToHex(byte[] bytes) {
         char[] hexChars = new char[bytes.length * 2];
-        for ( int j = 0; j < bytes.length; j++ ) {
+        for (int j = 0; j < bytes.length; j++) {
             int v = bytes[j] & 0xFF;
             hexChars[j * 2] = hexArray[v >>> 4];
             hexChars[j * 2 + 1] = hexArray[v & 0x0F];
